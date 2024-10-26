@@ -1,0 +1,331 @@
+{
+	"books": [
+		{
+			"id": "1",
+			"title": "The Great Gatsby",
+			"authorId": "1",
+			"description": "A novel about the American dream and the disillusionment that comes with it.",
+			"price": 10.99,
+			"genreId": "5",
+			"rating": 4.4,
+			"featured": false,
+			"image": "/images/1.jpg"
+		},
+		{
+			"id": "2",
+			"title": "To Kill a Mockingbird",
+			"authorId": "2",
+			"description": "A novel set in the Deep South and focused on themes of racial injustice and moral growth.",
+			"price": 12.99,
+			"genreId": "1",
+			"rating": 4.8,
+			"featured": true,
+			"image": "/images/2.jpg"
+		},
+		{
+			"id": "3",
+			"title": "1984",
+			"authorId": "3",
+			"description": "A dystopian novel that explores the dangers of totalitarianism and extreme political ideology.",
+			"price": 14.99,
+			"genreId": "2",
+			"rating": 4.7,
+			"featured": false,
+			"image": "/images/3.jpg"
+		},
+		{
+			"id": "4",
+			"title": "Pride and Prejudice",
+			"authorId": "4",
+			"description": "A romantic novel that charts the emotional development of the protagonist, Elizabeth Bennet.",
+			"price": 9.99,
+			"genreId": "3",
+			"rating": 4.6,
+			"featured": false,
+			"image": "/images/4.jpg"
+		},
+		{
+			"id": "5",
+			"title": "The Catcher in the Rye",
+			"authorId": "5",
+			"description": "A story about teenage rebellion and alienation narrated by the protagonist Holden Caulfield.",
+			"price": 11.99,
+			"genreId": "1",
+			"rating": 4.0,
+			"featured": true,
+			"image": "/images/5.jpg"
+		},
+		{
+			"id": "6",
+			"title": "The Alchemist",
+			"authorId": "6",
+			"description": "A philosophical book that tells the story of Santiago, a shepherd boy on a journey to discover his personal legend.",
+			"price": 13.99,
+			"genreId": "4",
+			"rating": 4.5,
+			"featured": false,
+			"image": "/images/6.jpg"
+		},
+		{
+			"id": "7",
+			"title": "Brave New World",
+			"authorId": "7",
+			"description": "A dystopian novel about a society driven by technology, control, and pleasure.",
+			"price": 15.99,
+			"genreId": "2",
+			"rating": 4.3,
+			"featured": true,
+			"image": "/images/7.jpg"
+		},
+		{
+			"id": "8",
+			"title": "Emma",
+			"authorId": "4",
+			"description": "A story of obsession and love in the 1800's in white society.",
+			"price": 17.99,
+			"genreId": "5",
+			"rating": 4.1,
+			"featured": false,
+			"image": "/images/8.jpg"
+		},
+		{
+			"id": "9",
+			"title": "War and Peace",
+			"authorId": "8",
+			"description": "An epic tale of history, war, and personal struggles set against the backdrop of Napoleonic Russia.",
+			"price": 19.99,
+			"genreId": "1",
+			"rating": 4.7,
+			"featured": true,
+			"image": "/images/9.jpg"
+		},
+		{
+			"id": "10",
+			"title": "The Hobbit",
+			"authorId": "7",
+			"description": "A fantasy adventure story about Bilbo Baggins and his journey through Middle-earth.",
+			"price": 14.99,
+			"genreId": "4",
+			"rating": 4.9,
+			"featured": true,
+			"image": "/images/10.jpg"
+		},
+		{
+			"id": "11",
+			"title": "Frankenstein",
+			"authorId": "3",
+			"description": "A gothic novel that explores the dangers of playing God and creating life.",
+			"price": 10.99,
+			"genreId": "2",
+			"rating": 4.4,
+			"featured": false,
+			"image": "/images/11.jpg"
+		},
+		{
+			"id": "12",
+			"title": "Jane Eyre",
+			"authorId": "4",
+			"description": "A coming-of-age novel that highlights issues of class, sexuality, and moral righteousness.",
+			"price": 12.49,
+			"genreId": "3",
+			"rating": 4.6,
+			"featured": false,
+			"image": "/images/12.jpg"
+		}
+	],
+	"genres": [
+		{ "id": "1", "name": "Fiction", "image": "/images/g1.jpg" },
+		{ "id": "2", "name": "Dystopian", "image": "/images/g2.jpg" },
+		{ "id": "3", "name": "Romance", "image": "/images/g3.jpg" },
+		{ "id": "4", "name": "Adventure", "image": "/images/g4.jpg" },
+		{ "id": "5", "name": "Classics", "image": "/images/g5.jpg" }
+	],
+	"authors": [
+		{
+			"id": "1",
+			"name": "F. Scott Fitzgerald",
+			"biography": "F. Scott Fitzgerald was an American novelist and short story writer, widely regarded as one of the greatest American writers of the 20th century. He is best known for his novel *The Great Gatsby*, which explores themes of decadence, idealism, and excess in the Jazz Age. Fitzgerald struggled with alcoholism throughout his life, which ultimately affected his writing career. Despite facing many personal and professional challenges, his work has become a defining voice of the Roaring Twenties.",
+			"image": "/images/a1.jpg"
+		},
+		{
+			"id": "2",
+			"name": "Harper Lee",
+			"biography": "Harper Lee was an American novelist famous for her Pulitzer Prize-winning novel *To Kill a Mockingbird*, a classic of modern American literature. The book tackles issues of racial injustice in the Deep South, and its moral and social messages resonate to this day. Though she published only a few works, Harper Lee's impact on American literature and social consciousness is immense. She led a quiet life, shunning the spotlight, but her work speaks volumes about courage, compassion, and the fight for justice.",
+			"image": "/images/a2.jpg"
+		},
+		{
+			"id": "3",
+			"name": "George Orwell",
+			"biography": "George Orwell, born Eric Arthur Blair, was an English novelist, essayist, and critic best known for his allegorical novella *Animal Farm* and his dystopian novel *1984*. Orwell's work is characterized by lucid prose, biting social criticism, and a passionate advocacy of democratic socialism. His views on totalitarianism, censorship, and societal control have made him one of the most influential writers of the 20th century, with his name synonymous with the critique of authoritarianism.",
+			"image": "/images/a3.jpg"
+		},
+		{
+			"id": "4",
+			"name": "Jane Austen",
+			"biography": "Jane Austen was an English novelist known for her keen observation of social manners and the intimate portrayal of middle-class life in the 18th century. Her novels, including *Pride and Prejudice* and *Emma*, are known for their sharp wit, engaging characters, and timeless love stories. Austen's novels are a reflection of the dependence of women on marriage in her time and the social constraints they faced. Her works have continued to inspire countless adaptations and remain a beloved part of English literature.",
+			"image": "/images/a4.jpg"
+		},
+		{
+			"id": "5",
+			"name": "J.D. Salinger",
+			"biography": "J.D. Salinger was an American writer known for his novel *The Catcher in the Rye*, which has become a defining work for teenage angst and rebellion. Salinger was famously reclusive, avoiding public attention after the massive success of his novel. Despite publishing only a handful of works, his influence on modern literature and culture is profound, as his portrayal of disaffected youth continues to resonate with generations of readers.",
+			"image": "/images/a5.jpg"
+		},
+		{
+			"id": "6",
+			"name": "Paulo Coelho",
+			"biography": "Paulo Coelho is a Brazilian lyricist and novelist, best known for his philosophical novel *The Alchemist*. His works often explore the search for meaning, spirituality, and personal fulfillment, blending magical realism with wisdom and parable. *The Alchemist*, translated into 80 languages, is one of the best-selling books in history. Coelho's writing speaks to those who are looking for purpose in life, and his success has made him one of the most influential literary figures of our time.",
+			"image": "/images/a6.jpg"
+		},
+		{
+			"id": "7",
+			"name": "Aldous Huxley",
+			"biography": "Aldous Huxley was an English writer and philosopher, best known for his dystopian novel *Brave New World*, which explores themes of technological advancement, dehumanization, and totalitarianism. Huxley's work is characterized by its concern with the nature of reality and human perception, influenced by his deep interest in mysticism, parapsychology, and psychedelic experiences. His critiques of modern society and his prophetic visions of the future remain relevant in contemporary discussions on ethics and science.",
+			"image": "/images/a7.jpg"
+		},
+		{
+			"id": "8",
+			"name": "Leo Tolstoy",
+			"biography": "Leo Tolstoy was a Russian writer, philosopher, and social reformer, best known for his epic novels *War and Peace* and *Anna Karenina*. His works explore the complexities of Russian society, war, and human morality. Later in life, Tolstoy became a spiritual leader, advocating for nonviolent resistance, which would go on to influence figures like Mahatma Gandhi. His deep philosophical explorations and literary achievements have earned him a place among the greatest novelists of all time.",
+			"image": "/images/a8.jpg"
+		}
+	],
+	"reviews": [
+		{
+			"id": "1",
+			"bookId": "1",
+			"userId": "101",
+			"rating": 5,
+			"comment": "A timeless classic!"
+		},
+		{
+			"id": "2",
+			"bookId": "2",
+			"userId": "102",
+			"rating": 4,
+			"comment": "A powerful story."
+		},
+		{
+			"id": "3",
+			"bookId": "3",
+			"userId": "103",
+			"rating": 5,
+			"comment": "Chilling and thought-provoking."
+		},
+		{
+			"id": "4",
+			"bookId": "4",
+			"userId": "104",
+			"rating": 4,
+			"comment": "A beautifully written love story."
+		},
+		{
+			"id": "5",
+			"bookId": "3",
+			"userId": "105",
+			"rating": 3,
+			"comment": "A bit overrated but still a good read."
+		},
+		{
+			"id": "6",
+			"bookId": "6",
+			"userId": "106",
+			"rating": 5,
+			"comment": "Inspiring and uplifting!"
+		},
+		{
+			"id": "7",
+			"bookId": "1",
+			"userId": "102",
+			"rating": 4,
+			"comment": "I found it intriguing but not the best."
+		},
+		{
+			"id": "8",
+			"bookId": "2",
+			"userId": "103",
+			"rating": 5,
+			"comment": "A deeply moving novel."
+		},
+		{
+			"id": "9",
+			"bookId": "4",
+			"userId": "105",
+			"rating": 5,
+			"comment": "Amazing, a must-read!"
+		},
+		{
+			"id": "10",
+			"bookId": "5",
+			"userId": "104",
+			"rating": 4,
+			"comment": "Great character development."
+		},
+		{
+			"id": "11",
+			"bookId": "6",
+			"userId": "105",
+			"rating": 5,
+			"comment": "A book that changes your life!"
+		},
+		{
+			"id": "12",
+			"bookId": "3",
+			"userId": "101",
+			"rating": 4,
+			"comment": "Dark and haunting but brilliant."
+		},
+		{
+			"id": "13",
+			"bookId": "7",
+			"userId": "106",
+			"rating": 4,
+			"comment": "A dystopian masterpiece."
+		},
+		{
+			"id": "14",
+			"bookId": "8",
+			"userId": "103",
+			"rating": 3,
+			"comment": "Good, but not my favorite."
+		},
+		{
+			"id": "15",
+			"bookId": "9",
+			"userId": "105",
+			"rating": 5,
+			"comment": "An epic saga like no other!"
+		},
+		{
+			"id": "16",
+			"bookId": "10",
+			"userId": "106",
+			"rating": 5,
+			"comment": "One of the best fantasy novels I've ever read."
+		},
+		{
+			"id": "17",
+			"bookId": "11",
+			"userId": "104",
+			"rating": 4,
+			"comment": "A thought-provoking gothic novel."
+		},
+		{
+			"id": "18",
+			"bookId": "12",
+			"userId": "102",
+			"rating": 4,
+			"comment": "A great coming-of-age story."
+		}
+	],
+	"users": [
+		{ "id": "101", "username": "Reader 1", "email": "reader1@example.com" },
+		{ "id": "102", "username": "Reader 2", "email": "reader2@example.com" },
+		{ "id": "103", "username": "Reader 3", "email": "reader3@example.com" },
+		{ "id": "104", "username": "Reader 4", "email": "reader4@example.com" },
+		{ "id": "105", "username": "Reader 5", "email": "reader5@example.com" },
+		{ "id": "106", "username": "Reader 6", "email": "reader6@example.com" },
+		{ "id": "107", "username": "Reader 7", "email": "reader7@example.com" },
+		{ "id": "108", "username": "Reader 8", "email": "reader8@example.com" }
+	]
+}
