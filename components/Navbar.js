@@ -1,4 +1,5 @@
 import { useUser } from "@/context/UserContext";
+import { useTheme } from "@/context/ThemeContext"; // Import the theme context
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -6,6 +7,7 @@ import data from "../../bookstore/Data.json"; // Adjust the path to your JSON fi
 
 export default function Navbar() {
 	const { user, logout } = useUser();
+	const { theme, toggleTheme } = useTheme(); // Access theme context
 	const [searchQuery, setSearchQuery] = useState("");
 	const [filteredResults, setFilteredResults] = useState([]);
 	const router = useRouter();
@@ -30,7 +32,6 @@ export default function Navbar() {
 	};
 
 	const handleSelect = async (id, type, name) => {
-		console.log(name)
 		if (!user) {
 			console.error("User is not logged in.");
 			router.push("/login"); // Redirect to login if user is not logged in
@@ -73,10 +74,14 @@ export default function Navbar() {
 	};
 
 	return (
-		<div className="merriweather">
+		<div
+			className={`merriweather ${
+				theme === "dark" ? "dark-theme" : "light-theme"
+			}`}
+		>
 			<nav
 				className="navbar navbar-expand-lg bg-body-tertiary merriweather-regular"
-				data-bs-theme="light"
+				data-bs-theme={theme === "dark" ? "dark" : "light"}
 			>
 				<div className="container-fluid">
 					<Link className="navbar-brand" style={{ fontSize: "23px" }} href="/">
@@ -125,13 +130,20 @@ export default function Navbar() {
 									Register
 								</Link>
 							</li>
-							<li>
+							{user && <li>
 								<Link className="nav-link" href="/history">
 									History
 								</Link>
-							</li>
+							</li>}
 						</ul>
-						<div className="position-relative">
+						{/* Theme Toggler */}
+						<button
+							className={`btn ${theme === "dark" ? "btn-light" : "btn-dark"}`}
+							onClick={toggleTheme}
+						>
+							{theme === "light" ? "Dark" : "Light"}
+						</button>
+						<div className="position-relative ms-2">
 							<input
 								type="text"
 								className="form-control me-2"

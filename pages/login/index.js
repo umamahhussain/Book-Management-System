@@ -30,7 +30,14 @@ const handleClick = async () => {
 			className="login mb-5 mt-5 merriweather"
 			style={{ justifyItems: "center" }}
 		>
-			<div className="card" style={{ width: "50rem", alignContent: "center" }}>
+			<div
+				className="card"
+				style={{
+					width: "50rem",
+					alignContent: "center",
+					backgroundColor: "whitesmoke",
+				}}
+			>
 				<h2 className="card-header" style={{ textAlign: "center" }}>
 					Book Store
 				</h2>

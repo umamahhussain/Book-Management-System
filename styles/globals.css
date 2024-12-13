@@ -41,7 +41,7 @@
 }
 
 .light {
-  background: linear-gradient(270deg, #eef4f7, #dce9f2, #c9deed, #e2eff6);
+  background: linear-gradient(270deg, #eef4f7, #dce9f2, #d6eaf9, #e2eff6);
   background-size: 400% 400%;
   color: black;
   animation: gradientAnimation 15s ease infinite;
@@ -110,8 +110,7 @@
   justify-content: space-evenly; /* Evenly space cards */
   padding: 20px;
 }
-
-.card22 {
+.card {
   width: 200px; /* Fixed width for each card */
   margin-bottom: 30px;
   margin-top: 30px;
@@ -120,7 +119,6 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .d_card {
   width: 270px; /* Fixed width for each card */
   height: 430px;
@@ -134,22 +132,20 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card22 img {
+
+.card img {
   border-radius: 8px 8px 0 0; /* Rounded corners for the top of the card image */
 }
-
-.card22-body {
+.card-body {
   text-align: center;
-  background-color: #b9b9b9;
+  /* background-color: #b9b9b9; */
   padding: 5px;
 }
-
-.card22-title {
+.card-title {
   font-size: 1.25rem;
   margin-bottom: 10px;
 }
-
-.card22-text {
+.card-text {
   font-size: 1rem;
   margin-bottom: 15px;
 }
