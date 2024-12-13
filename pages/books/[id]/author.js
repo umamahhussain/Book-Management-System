@@ -1,12 +1,10 @@
-// pages/books/[id]/author.js
 import { useRouter } from "next/router";
-import { getAuthorDetailsById } from "@/helper"; // Assuming you have this function in helper to fetch author details
+import { getAuthorDetailsById, getBookDetailsById } from "@/helper"; // Ensure both functions are available
 import { DetailedCard } from "@/components/Card";
 import { Player } from "@lottiefiles/react-lottie-player";
+import withAuth from "@/lib/authRouting";
 
-
-
-export default function DetailedAuthorPage({ author }) {
+const DetailedAuthorPage = ({ author }) => {
 	return (
 		<div
 			className="rows full-page"
@@ -23,7 +21,6 @@ export default function DetailedAuthorPage({ author }) {
 					title={author.name}
 					image={author.image}
 				/>
-				
 			</div>
 
 			{/* Author Details */}
@@ -49,12 +46,17 @@ export default function DetailedAuthorPage({ author }) {
 			</div>
 		</div>
 	);
-}
+};
+
+// Wrap the component with withAuth
+export default withAuth(DetailedAuthorPage);
 
 // Fetch author details based on the book ID
 export async function getServerSideProps(context) {
 	const { id } = context.params; // This is the book ID
-	const author = await getAuthorDetailsById(id); // Fetch the author based on book ID
+	const bookDetails = await getBookDetailsById(id); // Fetch the book details first
+	const authorId = bookDetails.authorId; // Assuming bookDetails has an authorId field
+	const author = await getAuthorDetailsById(authorId); // Now fetch the author based on the author ID
 
 	return {
 		props: {

@@ -5,28 +5,23 @@ import { DetailedCard } from "@/components/Card";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { Router, useRouter } from "next/router";
 import Link from "next/link";
+import withAuth from "@/lib/authRouting"; // Import your withAuth HOC
 
-export default function DetailedBookPage({
-	book,
-	author,
-	BookReviews,
-	BookGenre,
-	Usernames
-}) {
-
+// Detailed Book Page Component
+function DetailedBookPage({ book, author, BookReviews, BookGenre, Usernames }) {
 	const router = useRouter(); // Initialize the useRouter hook
 
 	const handleAuthorClick = () => {
 		router.push(`/authors/${author.id}`); // Navigate to the author page
 	};
-	const handleFeatureClick = () => {
-		router.push(`/home`); // Navigate to the author page
-	};
 
+	const handleFeatureClick = () => {
+		router.push(`/home`); // Navigate to the featured page
+	};
 
 	return (
 		<div
-			className="rows full-page"
+			className="rows full-page mb-2 mt-2"
 			style={{
 				display: "flex",
 				justifyContent: "space-evenly",
@@ -65,7 +60,6 @@ export default function DetailedBookPage({
 								className="h4Heading"
 								style={{ marginRight: "10px", cursor: "pointer" }}
 								onClick={handleFeatureClick}
-								
 							>
 								featured
 							</h5>
@@ -122,26 +116,24 @@ export default function DetailedBookPage({
 	);
 }
 
+// Wrap the component with withAuth
+export default withAuth(DetailedBookPage);
 
+// Fetch data for static generation
 export async function getStaticProps({ params }) {
 	const filePath = path.join(process.cwd(), "Data.json");
 	const jsonData = await fs.readFile(filePath);
 	const data = JSON.parse(jsonData);
 
 	const book = data.books.find((obj) => obj.id === params.id);
-	const author = data.authors.find((obj) => obj.id === book.authorId)
-	const BookGenre = data.genres.find((obj)=> obj.id === book.genreId)
-	
-	const BookReviews= data.reviews.filter((obj)=>{
-		return(
-			obj.bookId===book.id
-		)
-	})
+	const author = data.authors.find((obj) => obj.id === book.authorId);
+	const BookGenre = data.genres.find((obj) => obj.id === book.genreId);
+
+	const BookReviews = data.reviews.filter((obj) => obj.bookId === book.id);
 
 	const Usernames = BookReviews.map((review) => {
 		return data.users.find((user) => user.id === review.userId);
 	});
-	
 
 	if (!book) {
 		return { notFound: true };
@@ -153,11 +145,12 @@ export async function getStaticProps({ params }) {
 			author,
 			BookReviews,
 			BookGenre,
-			Usernames
-		}
+			Usernames,
+		},
 	};
 }
 
+// Define static paths for pre-rendering
 export async function getStaticPaths() {
 	const filePath = path.join(process.cwd(), "Data.json");
 	const jsonData = await fs.readFile(filePath);

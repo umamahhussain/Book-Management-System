@@ -21,7 +21,6 @@
 
 .heading {
   font-family: "Lobster", sans-serif;
-  color: whitesmoke;
   font-size: 4rem;
   margin: 0;
   margin-right: 10px; 
@@ -34,11 +33,20 @@
   margin-top: 10px;
 }
 
-.moving-gradient {
+.dark {
   background: linear-gradient(270deg, #000000, #1a1a1a, #333333, #4d4d4d, #666666);
   background-size: 400% 400%;
+  color: whitesmoke;
   animation: gradientAnimation 15s ease infinite;
 }
+
+.light {
+  background: linear-gradient(270deg, #eef4f7, #dce9f2, #c9deed, #e2eff6);
+  background-size: 400% 400%;
+  color: black;
+  animation: gradientAnimation 15s ease infinite;
+}
+
 
 .lottie {
   animation: fadeIn 1.5s ease-in-out;
@@ -103,7 +111,7 @@
   padding: 20px;
 }
 
-.card {
+.card22 {
   width: 200px; /* Fixed width for each card */
   margin-bottom: 30px;
   margin-top: 30px;
@@ -126,22 +134,22 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card img {
+.card22 img {
   border-radius: 8px 8px 0 0; /* Rounded corners for the top of the card image */
 }
 
-.card-body {
+.card22-body {
   text-align: center;
   background-color: #b9b9b9;
   padding: 5px;
 }
 
-.card-title {
+.card22-title {
   font-size: 1.25rem;
   margin-bottom: 10px;
 }
 
-.card-text {
+.card22-text {
   font-size: 1rem;
   margin-bottom: 15px;
 }

@@ -7,17 +7,17 @@ export function Card(props) {
 	console.log("Path Name is ",path)
 
 	return (
-		<div className="card">
+		<div className="card22">
 			<Image
-				className="card-img"
+				className="card22-img"
 				src={props.image}
 				width={200}
 				height={300}
 				alt="Picture of the book"
 			/>
-			<div className="card-body">
-				<h5 className="card-title">{props.title}</h5>
-				<p className="card-text">{props.description}</p>
+			<div className="card22-body">
+				<h5 className="card22-title">{props.title}</h5>
+				<p className="card22-text">{props.description}</p>
 				<a href={props.path+props.id} className="btn btn-dark">
 					View Details
 				</a>
